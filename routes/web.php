@@ -38,3 +38,31 @@ Route::get('arreglos' , function(){
     print_r($estudiantes);
     echo "</pre>";
 } );
+
+Route::get ("paises", function(){
+    $paises = [
+        "Colombia" => [
+            "capital" => "Bogota",
+            "moneda" => "Peso",
+            "poblacion" => 51
+        ],
+        "Peru"=> [
+            "capital" => "Lima",
+            "moneda" => "Sol",
+            "poblacion" => 33.19
+        ],
+        "Paraguay" => [
+            "capital" => "Asuncion",
+            "moneda" => "Guarani",
+            "poblacion" => 7
+        ]
+    ];
+    //Recorrer el rreglo de paises
+
+    foreach ($paises as $pais){
+        echo "<pre>";
+        print_r($pais);
+        echo "</pre>";
+        echo "<hr />";
+    }
+});
