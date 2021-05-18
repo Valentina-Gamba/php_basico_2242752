@@ -57,12 +57,17 @@ Route::get ("paises", function(){
             "poblacion" => 7
         ]
     ];
+
+    //Mostrar la vista de paises
+    //Llevando arreglo de paises
+    return view('paises')->with("naciones", $paises);
+
     //Recorrer el rreglo de paises
 
-    foreach ($paises as $pais){
-        echo "<pre>";
-        print_r($pais);
-        echo "</pre>";
-        echo "<hr />";
-    }
+    //foreach ($paises as $pais){
+      //  echo "<pre>";
+        //print_r($pais);
+        //echo "</pre>";
+        //echo "<hr />";
+    //}
 });
