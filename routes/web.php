@@ -62,12 +62,9 @@ Route::get ("paises", function(){
     //Llevando arreglo de paises
     return view('paises')->with("naciones", $paises);
 
-    //Recorrer el rreglo de paises
-
-    //foreach ($paises as $pais){
-      //  echo "<pre>";
-        //print_r($pais);
-        //echo "</pre>";
-        //echo "<hr />";
-    //}
 });
+
+Route::get('mostrar_formulario','MetabuscadorController@mostrar_formulario' );
+
+Route::post('buscar_termino', 'MetabuscadorController@buscar_termino' );
+
